@@ -123,3 +123,13 @@ test('replaces all paths in an array, using a replacer function', t => {
   t.deepEqual(actual, expected);
   t.end();
 });
+
+test('throws if trying to replace an unknown prop', t => {
+  t.throws(() => replacePath(source, 'a.nonexistant.bbb.x', '3rr0r'));
+  t.end();
+});
+
+test('throws if trying to iterate a non Array', t => {
+  t.throws(() => replacePath(source, 'a..x', '3rr0r'));
+  t.end();
+});
