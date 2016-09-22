@@ -2,7 +2,7 @@
 
 Replaces nested values in an object.
 
-[![Travis](https://img.shields.io/travis/lusentis/replace-path.svg?maxAge=3600)]()
+[![](https://img.shields.io/travis/lusentis/replace-path.svg?maxAge=3600)]()
 
 [![](https://nodei.co/npm/replace-path.png?compact=true)]()
 
@@ -34,3 +34,6 @@ var next5 = replacePath(source, 'd..x', (source, key, oldValue) => {
 
 Check [index.spec.js](index.spec.js) for detailed usage.
 
+#### License
+
+See `LICENSE.md`
