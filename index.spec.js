@@ -78,3 +78,28 @@ test('replaces all paths in an array', t => {
   t.deepEqual(actual, expected);
   t.end();
 });
+
+test('replaces all paths in an array, using a replacer function', t => {
+  const replacerFn = (source, key, oldValue) => {
+    source[key + 'Bar'] = oldValue.toUpperCase();
+  };
+  const actual = replacePath(source, 'd..x', replacerFn);
+  const expected = {
+    a: '123',
+    b: {
+      m: '456',
+      n: '789'
+    },
+    d: [{
+      x: 'aaa',
+      xBar: 'AAA',
+      y: 'z'
+    }, {
+      x: 'bbb',
+      xBar: 'BBB',
+      y: 'w'
+    }]
+  };
+  t.deepEqual(actual, expected);
+  t.end();
+});

@@ -21,7 +21,11 @@ function replacePathHelper (source, path, nextValue) {
       replacePathHelper(source[current], tokens.slice(1).join('.'), nextValue);
     }
   } else {
-    source[current] = nextValue;
+    if (typeof nextValue === 'function') {
+      nextValue(source, current, source[current]);
+    } else {
+      source[current] = nextValue;
+    }
   }
   return source;
 }
