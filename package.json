@@ -1,0 +1,21 @@
+{
+  "name": "replace-path",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && tape",
+    "lint": "semistandard"
+  },
+  "author": "Simone Lusenti <simone@plasticpanda.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "deep-freeze": "0.0.1",
+    "pre-commit": "^1.1.3",
+    "semistandard": "^9.0.0",
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "clone": "^1.0.2"
+  }
+}
