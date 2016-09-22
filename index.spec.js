@@ -1,5 +1,5 @@
 
-const test = require('tape');
+const tap = require('tap');
 const deepFreeze = require('deep-freeze');
 const replacePath = require('./');
 
@@ -19,7 +19,7 @@ const source = {
 };
 deepFreeze(source);
 
-test('replaces at one level deep', t => {
+tap.test('replaces at one level deep', t => {
   const actual = replacePath(source, 'a', 'BAR');
   const expected = {
     a: 'BAR',
@@ -39,7 +39,7 @@ test('replaces at one level deep', t => {
   t.end();
 });
 
-test('replaces a nested path', t => {
+tap.test('replaces a nested path', t => {
   const actual = replacePath(source, 'b.n', 'BAR');
   const expected = {
     a: '123',
@@ -59,7 +59,7 @@ test('replaces a nested path', t => {
   t.end();
 });
 
-test('replaces all paths in an array', t => {
+tap.test('replaces all paths in an array', t => {
   const actual = replacePath(source, 'd..x', 'BAR');
   const expected = {
     a: '123',
@@ -79,7 +79,7 @@ test('replaces all paths in an array', t => {
   t.end();
 });
 
-test('replaces a path in an array', t => {
+tap.test('replaces a path in an array', t => {
   const actual = replacePath(source, 'd.1.x', 'BAR');
   const expected = {
     a: '123',
@@ -99,7 +99,7 @@ test('replaces a path in an array', t => {
   t.end();
 });
 
-test('replaces all paths in an array, using a replacer function', t => {
+tap.test('replaces all paths in an array, using a replacer function', t => {
   const replacerFn = (source, key, oldValue) => {
     source[key + 'Bar'] = oldValue.toUpperCase();
   };
@@ -124,12 +124,12 @@ test('replaces all paths in an array, using a replacer function', t => {
   t.end();
 });
 
-test('throws if trying to replace an unknown prop', t => {
+tap.test('throws if trying to replace an unknown prop', t => {
   t.throws(() => replacePath(source, 'a.nonexistant.bbb.x', '3rr0r'));
   t.end();
 });
 
-test('throws if trying to iterate a non Array', t => {
+tap.test('throws if trying to iterate a non Array', t => {
   t.throws(() => replacePath(source, 'a..x', '3rr0r'));
   t.end();
 });
