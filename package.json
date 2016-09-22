@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && tape",
+    "test": "npm run lint && tape *.spec.js",
     "lint": "semistandard"
   },
   "author": "Simone Lusenti <simone@plasticpanda.com>",
