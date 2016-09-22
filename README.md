@@ -2,7 +2,7 @@
 
 Replaces nested values in an object.
 
-[![](https://img.shields.io/travis/lusentis/replace-path.svg?maxAge=3600)]()
+[![Build Status](https://travis-ci.org/lusentis/replace-path.svg?branch=master)](https://travis-ci.org/lusentis/replace-path)
 [![Coverage Status](https://coveralls.io/repos/github/lusentis/replace-path/badge.svg?branch=master)](https://coveralls.io/github/lusentis/replace-path?branch=master)
 
 [![](https://nodei.co/npm/replace-path.png?compact=true)]()
