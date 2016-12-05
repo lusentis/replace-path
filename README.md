@@ -4,6 +4,8 @@ Replaces nested values in an object.
 
 [![Build Status](https://travis-ci.org/lusentis/replace-path.svg?branch=master)](https://travis-ci.org/lusentis/replace-path)
 [![Coverage Status](https://coveralls.io/repos/github/lusentis/replace-path/badge.svg?branch=master)](https://coveralls.io/github/lusentis/replace-path?branch=master)
+[![dependencies Status](https://david-dm.org/lusentis/replace-path/status.svg)](https://david-dm.org/lusentis/replace-path) 
+[![devDependencies Status](https://david-dm.org/lusentis/replace-path/dev-status.svg)](https://david-dm.org/lusentis/replace-path?type=dev)
 
 [![](https://nodei.co/npm/replace-path.png?compact=true)]()
 
